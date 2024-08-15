@@ -3,7 +3,7 @@ import { shopContext } from "../Context/shopContext";
 import staricon from "../Components/Assets/star_icon.png";
 import stardull from "../Components/Assets/star_dull_icon.png";
 const ProductView = () => {
-  const { preview, addCart } = useContext(shopContext);
+  const { preview, setCart } = useContext(shopContext);
   return (
     <>
       <div style={{ display: "flex", marginLeft: "10px" }}>
