@@ -3,7 +3,7 @@ import { shopContext } from "../Context/shopContext";
 import staricon from "../Components/Assets/star_icon.png";
 import stardull from "../Components/Assets/star_dull_icon.png";
 const ProductView = () => {
-  const { preview } = useContext(shopContext);
+  const { preview, addCart } = useContext(shopContext);
   return (
     <>
       <div style={{ display: "flex", marginLeft: "10px" }}>
@@ -52,6 +52,18 @@ const ProductView = () => {
                 height: "40px",
                 backgroundColor: "red",
                 color: "white",
+              }}
+              onClick={() => {
+                setCart((prev) => [
+                  ...prev,
+                  {
+                    id: props.id,
+                    image: props.image,
+                    name: props.name,
+                    price: props.new_price,
+                  },
+                ]);
+                alert(`Item "${props.name}" has been added to the cart.`);
               }}
             >
               Add To Cart
