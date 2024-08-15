@@ -1,0 +1,44 @@
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+.mens-container {
+    width: 100%;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+}
+.mens-container .banner{
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+.mens-container .banner img{
+    width: 80%;
+    border: 2px solid lightcoral;
+}
+.mens-products {
+   display: grid;
+   grid-template-columns: repeat(4,1fr);
+   margin-top: 30px;
+   margin-bottom: 190px;
+}
+.mens-products .item{
+    padding: 30px 10px;
+}
+@media (max-width: 600px) {
+    .mens-container .banner img{
+        width: 100%;
+        height: 140px;
+    }
+    .mens-products{
+        display: grid;
+        grid-template-columns: repeat(3,1fr);
+    }
+    .mens-products .item{
+        padding: 10px;
+    }
+}
+
+
