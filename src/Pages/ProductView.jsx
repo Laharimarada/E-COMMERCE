@@ -52,18 +52,19 @@ const ProductView = () => {
                 height: "40px",
                 backgroundColor: "red",
                 color: "white",
+                cursor: "pointer",
               }}
               onClick={() => {
                 setCart((prev) => [
                   ...prev,
                   {
-                    id: props.id,
-                    image: props.image,
-                    name: props.name,
-                    price: props.new_price,
+                    id: preview.id,
+                    image: preview.image,
+                    name: preview.name,
+                    price: preview.new_price,
                   },
                 ]);
-                alert(`Item "${props.name}" has been added to the cart.`);
+                alert(`Item "${preview.name}" has been added to the cart.`);
               }}
             >
               Add To Cart
